@@ -22,9 +22,6 @@ dpkg-reconfigure --frontend=noninteractive locales
 
 aptitude install -y git bash-completion lsof vim colordiff ccze most sudo ipset whois
 
-mkdir -p /etc/iptables
-git clone https://github.com/BorX/iptables-init.git /etc/iptables
-
 mkdir -p /data/dotfiles
 git clone https://github.com/BorX/dotfiles.git /data/dotfiles
 /data/dotfiles/install.sh
