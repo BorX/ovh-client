@@ -3,6 +3,7 @@
 export PATH=$PATH:/sbin:/usr/sbin:/bin
 
 mv "$(dirname "$0")/iptables-init" /etc/
+chown -R 0:0 /etc/iptables-init/
 chmod 700 /etc/iptables-init/init
 /etc/iptables-init/init --quiet start
 
@@ -16,3 +17,8 @@ echo 'AllowUsers myuser' >>/etc/ssh/sshd_config
 systemctl daemon-reload
 systemctl restart ssh
 
+mv "$(dirname "$0")/dotfiles" /etc/
+chown -R 0:0 /etc/dotfiles/
+/etc/dotfiles/install.sh
+chmod 755 /etc/dotfiles/home/installIntoHomeDirectory
+sudo -umyuser /etc/dotfiles/home/installIntoHomeDirectory

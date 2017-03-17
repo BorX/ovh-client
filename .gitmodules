@@ -1,3 +1,6 @@
 [submodule "initvm/iptables-init"]
 	path = initvm/iptables-init
 	url = https://github.com/BorX/iptables-init
+[submodule "initvm/dotfiles"]
+	path = initvm/dotfiles
+	url = https://github.com/BorX/dotfiles.git
